@@ -1,0 +1,30 @@
+<body>
+    {{#if msg}}
+        <h1>ERRO</h1>
+    {{/if}}
+    <div class="card">
+        <div class="card-body">
+            {{#each novosDados}}
+                <h1>Nome do Participante : {{nome}}</h1>
+                <h1>Nome do peixe: {{nome_peixe}}</h1>
+                <h1>Tamanho do Peixe: {{tamanho}}</h1>
+                <h1>Peso do Peixe: {{peso}}</h1>
+                <form action="/delete" method="post">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button type="submit" class="btn btn-danger">Deletar Usuario</button>
+                </form>
+                
+            {{else}}
+                <h1>Lista Vazia</h1>
+            {{/each}}
+        </div>
+    </div>
+    
+    
+    
+</body>
+<footer>
+{{!-- bootstrap --}}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</footer>

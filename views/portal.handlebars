@@ -1,0 +1,14 @@
+<body>
+    {{>alerta}}
+    <a href="/mostra"><button class="btn btn-primary">Mostrar Participantes</button></a>
+   <a href="/"><button class="btn btn-danger" >Voltar</button></a> 
+    <form class=" d-flex flex-column  text-center"  action="/candidato" method="post"> 
+        <h1>Vamos começar por aqui</h1>
+            <input placeholder="Insira seu Nome" name="nome">
+            <input placeholder="Insira o nome do seu peixe" name="nome_peixe">
+            <input placeholder="Insira o Tamanho do seu peixe(em centimetros)" name="tamanho">
+            <input placeholder="Insira o peso do seu peixe" name="peso">
+        <button class="btn btn-success" type="submit" >Go</button>
+    </form>
+    
+</body>
